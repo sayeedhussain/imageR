@@ -13,8 +13,8 @@ class ViewController: NSViewController {
     private let ImageViewWidth: CGFloat = 450
     private let ImageViewHeight: CGFloat = 450
 
-    @IBOutlet private weak var imageView: NSImageView!
-    @IBOutlet private weak var tableView: NSTableView!
+    @IBOutlet fileprivate weak var imageView: DragAndDropImageView!
+    @IBOutlet fileprivate weak var tableView: NSTableView!
     @IBOutlet private weak var actionBtn: NSButton!
 
     @IBOutlet private weak var tagsTxtFld: NSTextField!
@@ -36,14 +36,14 @@ class ViewController: NSViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        imageView.delegate = self
+        
         tableView.backgroundColor = AppColors.backgroundColor2()
         tagsTxtFld.backgroundColor = AppColors.backgroundColor2()
         notesTxtView.backgroundColor = AppColors.backgroundColor2()
         
         notesTxtView.textColor = NSColor.lightGray
-        
-        imageView.imageAlignment = .alignTopLeft
-        
+                
         setActionBtnTitle("Select Image")
         
         // Do any additional setup after loading the view.
@@ -72,14 +72,12 @@ class ViewController: NSViewController {
         
         let panel = NSOpenPanel()
 
-        panel.title = "Select File"
+        panel.title = "Select Image"
         panel.directoryURL = URL(fileURLWithPath: "~/Desktop", isDirectory: true)
 
         panel.allowsMultipleSelection = false
         panel.allowedFileTypes = types
-        
-        panel.delegate = self
-                
+                        
         panel.begin { (selection) in
             
             if selection == 1 {
@@ -165,23 +163,13 @@ extension ViewController: NSTableViewDelegate {
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 44
+        return 35
     }
     
     func selectionShouldChange(in tableView: NSTableView) -> Bool {
         return false
     }
     
-}
-
-extension ViewController: NSOpenSavePanelDelegate {
-    
-    func panelSelectionDidChange(_ sender: Any?) {
-        
-//        if let _sender = sender as? NSOpenPanel {
-//            print("path: \(_sender.url)")
-//        }
-    }
 }
 
 /*
@@ -234,3 +222,26 @@ extension ViewController: NSTableViewDelegate {
 }
  
 */
+
+extension ViewController: DragAndDropImageViewDelegate {
+    
+    func dragAndDropImageView(imageView: DragAndDropImageView, droppedImage image: NSImage?) {
+        
+        if let image = image {
+            
+            self.imageView.image = image
+
+            let dominantColors = image.dominantColors()
+            
+            var colors = [NSColor]()
+            
+            for i in 0..<min(dominantColors.count, 5) {
+                colors.append(dominantColors[i])
+            }
+
+            self.colors = colors
+            
+            self.tableView.reloadData()
+        }
+    }
+}

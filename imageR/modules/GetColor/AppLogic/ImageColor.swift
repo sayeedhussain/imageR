@@ -11,7 +11,7 @@ import Foundation
 struct ImageColor {
     
     let source: String
-    let colors: Dictionary <Color, Double>
+    let colors: Array<NSColor>
 }
 
 struct Color {

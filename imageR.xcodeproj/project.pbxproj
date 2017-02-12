@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3619138A1E3B350300E457FE /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619136A1E3B350200E457FE /* AppColors.swift */; };
 		3619138B1E3B350300E457FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619136B1E3B350200E457FE /* AppDelegate.swift */; };
 		3619138C1E3B350300E457FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3619136C1E3B350200E457FE /* Assets.xcassets */; };
 		3619138D1E3B350300E457FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3619136D1E3B350200E457FE /* Main.storyboard */; };
 		3619138E1E3B350300E457FE /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913711E3B350200E457FE /* MainWindowController.swift */; };
-		3619138F1E3B350300E457FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913721E3B350200E457FE /* ViewController.swift */; };
 		361913901E3B350300E457FE /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913741E3B350200E457FE /* NSImage+Extension.swift */; };
 		361913911E3B350300E457FE /* NSViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913751E3B350200E457FE /* NSViewController+Extension.swift */; };
 		361913931E3B350300E457FE /* ColorIM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913781E3B350200E457FE /* ColorIM.swift */; };
@@ -28,6 +26,39 @@
 		361913A11E3B35EF00E457FE /* ImageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913801E3B350200E457FE /* ImageColor.swift */; };
 		361913A21E3B35F600E457FE /* GetColorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913871E3B350200E457FE /* GetColorInteractorTests.swift */; };
 		361913A31E3B35F600E457FE /* ImageColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913881E3B350300E457FE /* ImageColorTests.swift */; };
+		361913EA1E3B39BB00E457FE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913E01E3B39BB00E457FE /* APIClient.swift */; };
+		361913EB1E3B39BB00E457FE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913E11E3B39BB00E457FE /* APIError.swift */; };
+		361913EE1E3B39BB00E457FE /* APIResponseErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913E41E3B39BB00E457FE /* APIResponseErrorParser.swift */; };
+		361913EF1E3B39BB00E457FE /* APIResponseErrorStatusCodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913E51E3B39BB00E457FE /* APIResponseErrorStatusCodeHandler.swift */; };
+		361913F01E3B39BB00E457FE /* APIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913E61E3B39BB00E457FE /* APIResponseHandler.swift */; };
+		361913F21E3B39BB00E457FE /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913E81E3B39BB00E457FE /* APIURLs.swift */; };
+		361913F31E3B39BB00E457FE /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361913E91E3B39BB00E457FE /* AppColors.swift */; };
+		3619140D1E3B39EB00E457FE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361914041E3B39E100E457FE /* Alamofire.framework */; };
+		3619140E1E3B39EB00E457FE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 361914041E3B39E100E457FE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3631D9A41E3B4B050013A3E0 /* NetworkingLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631D9A31E3B4B050013A3E0 /* NetworkingLibrary.swift */; };
+		3631D9A61E3B510E0013A3E0 /* APIResponseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631D9A51E3B510E0013A3E0 /* APIResponseTransformer.swift */; };
+		3631D9A81E3B52770013A3E0 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631D9A71E3B52770013A3E0 /* APIResponse.swift */; };
+		3631D9AA1E3BBEB50013A3E0 /* GetColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631D9A91E3BBEB40013A3E0 /* GetColorManager.swift */; };
+		36A1E58B1E3D1B1600D50A8F /* ColorDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E57F1E3D1B1600D50A8F /* ColorDifference.swift */; };
+		36A1E58C1E3D1B1600D50A8F /* ColorSpaceConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5811E3D1B1600D50A8F /* ColorSpaceConversion.m */; };
+		36A1E58D1E3D1B1600D50A8F /* DominantColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5831E3D1B1600D50A8F /* DominantColors.swift */; };
+		36A1E58E1E3D1B1600D50A8F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E5841E3D1B1600D50A8F /* Info.plist */; };
+		36A1E58F1E3D1B1600D50A8F /* INVector3.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5861E3D1B1600D50A8F /* INVector3.m */; };
+		36A1E5901E3D1B1600D50A8F /* INVector3SwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5871E3D1B1600D50A8F /* INVector3SwiftExtensions.swift */; };
+		36A1E5911E3D1B1600D50A8F /* KMeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5881E3D1B1600D50A8F /* KMeans.swift */; };
+		36A1E5921E3D1B1600D50A8F /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5891E3D1B1600D50A8F /* Memoization.swift */; };
+		36A1E5931E3D1B1600D50A8F /* PlatformExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E58A1E3D1B1600D50A8F /* PlatformExtensions.swift */; };
+		36A1E5941E3D1CD200D50A8F /* GetColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631D9A91E3BBEB40013A3E0 /* GetColorManager.swift */; };
+		36A1E5961E3D1F4E00D50A8F /* ColorDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E57F1E3D1B1600D50A8F /* ColorDifference.swift */; };
+		36A1E5971E3D1F4F00D50A8F /* ColorSpaceConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5811E3D1B1600D50A8F /* ColorSpaceConversion.m */; };
+		36A1E5981E3D1F4F00D50A8F /* DominantColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5831E3D1B1600D50A8F /* DominantColors.swift */; };
+		36A1E5991E3D1F4F00D50A8F /* INVector3.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5861E3D1B1600D50A8F /* INVector3.m */; };
+		36A1E59A1E3D1F4F00D50A8F /* INVector3SwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5871E3D1B1600D50A8F /* INVector3SwiftExtensions.swift */; };
+		36A1E59B1E3D1F4F00D50A8F /* KMeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5881E3D1B1600D50A8F /* KMeans.swift */; };
+		36A1E59C1E3D1F4F00D50A8F /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5891E3D1B1600D50A8F /* Memoization.swift */; };
+		36A1E59D1E3D1F4F00D50A8F /* PlatformExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E58A1E3D1B1600D50A8F /* PlatformExtensions.swift */; };
+		36A1E59F1E3D22A300D50A8F /* DragAndDropImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E59E1E3D22A300D50A8F /* DragAndDropImageView.swift */; };
+		36A1E5A11E3D22B300D50A8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1E5A01E3D22B300D50A8F /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +69,84 @@
 			remoteGlobalIDString = 3623E46C1E39C5CE00EFE48A;
 			remoteInfo = Colorr;
 		};
+		361913FF1E3B39E100E457FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		361914011E3B39E100E457FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		361914031E3B39E100E457FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		361914051E3B39E100E457FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		361914071E3B39E100E457FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		361914091E3B39E100E457FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		3619140B1E3B39E100E457FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		3619140F1E3B39EB00E457FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DD67C0A1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		361914111E3B39EB00E457FE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3619140E1E3B39EB00E457FE /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		361913431E3B1AD600E457FE /* imageRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imageRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3619136A1E3B350200E457FE /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		3619136B1E3B350200E457FE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3619136C1E3B350200E457FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3619136E1E3B350200E457FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		361913711E3B350200E457FE /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		361913721E3B350200E457FE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		361913741E3B350200E457FE /* NSImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
 		361913751E3B350200E457FE /* NSViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSViewController+Extension.swift"; sourceTree = "<group>"; };
 		361913761E3B350200E457FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +161,34 @@
 		361913871E3B350200E457FE /* GetColorInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetColorInteractorTests.swift; sourceTree = "<group>"; };
 		361913881E3B350300E457FE /* ImageColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageColorTests.swift; sourceTree = "<group>"; };
 		361913891E3B350300E457FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		361913E01E3B39BB00E457FE /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		361913E11E3B39BB00E457FE /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		361913E41E3B39BB00E457FE /* APIResponseErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseErrorParser.swift; sourceTree = "<group>"; };
+		361913E51E3B39BB00E457FE /* APIResponseErrorStatusCodeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseErrorStatusCodeHandler.swift; sourceTree = "<group>"; };
+		361913E61E3B39BB00E457FE /* APIResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseHandler.swift; sourceTree = "<group>"; };
+		361913E81E3B39BB00E457FE /* APIURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
+		361913E91E3B39BB00E457FE /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		361913F41E3B39E000E457FE /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		3623E46D1E39C5D100EFE48A /* imageR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3631D9A31E3B4B050013A3E0 /* NetworkingLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingLibrary.swift; sourceTree = "<group>"; };
+		3631D9A51E3B510E0013A3E0 /* APIResponseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseTransformer.swift; sourceTree = "<group>"; };
+		3631D9A71E3B52770013A3E0 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		3631D9A91E3BBEB40013A3E0 /* GetColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetColorManager.swift; sourceTree = "<group>"; };
+		36A1E57F1E3D1B1600D50A8F /* ColorDifference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDifference.swift; sourceTree = "<group>"; };
+		36A1E5801E3D1B1600D50A8F /* ColorSpaceConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpaceConversion.h; sourceTree = "<group>"; };
+		36A1E5811E3D1B1600D50A8F /* ColorSpaceConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSpaceConversion.m; sourceTree = "<group>"; };
+		36A1E5821E3D1B1600D50A8F /* DominantColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DominantColor.h; sourceTree = "<group>"; };
+		36A1E5831E3D1B1600D50A8F /* DominantColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DominantColors.swift; sourceTree = "<group>"; };
+		36A1E5841E3D1B1600D50A8F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A1E5851E3D1B1600D50A8F /* INVector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INVector3.h; sourceTree = "<group>"; };
+		36A1E5861E3D1B1600D50A8F /* INVector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INVector3.m; sourceTree = "<group>"; };
+		36A1E5871E3D1B1600D50A8F /* INVector3SwiftExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INVector3SwiftExtensions.swift; sourceTree = "<group>"; };
+		36A1E5881E3D1B1600D50A8F /* KMeans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMeans.swift; sourceTree = "<group>"; };
+		36A1E5891E3D1B1600D50A8F /* Memoization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memoization.swift; sourceTree = "<group>"; };
+		36A1E58A1E3D1B1600D50A8F /* PlatformExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformExtensions.swift; sourceTree = "<group>"; };
+		36A1E5951E3D1D9100D50A8F /* imageR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "imageR-Bridging-Header.h"; sourceTree = "<group>"; };
+		36A1E59E1E3D22A300D50A8F /* DragAndDropImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragAndDropImageView.swift; sourceTree = "<group>"; };
+		36A1E5A01E3D22B300D50A8F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3619140D1E3B39EB00E457FE /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,14 +213,13 @@
 		361913691E3B350200E457FE /* imageR */ = {
 			isa = PBXGroup;
 			children = (
+				3619139E1E3B351E00E457FE /* resources */,
 				3619136F1E3B350200E457FE /* common */,
 				361913701E3B350200E457FE /* controllers */,
 				361913731E3B350200E457FE /* extensions */,
 				361913771E3B350200E457FE /* models */,
 				3619137B1E3B350200E457FE /* modules */,
 				361913831E3B350200E457FE /* views */,
-				3619139E1E3B351E00E457FE /* resources */,
-				3619136A1E3B350200E457FE /* AppColors.swift */,
 				3619136B1E3B350200E457FE /* AppDelegate.swift */,
 				361913761E3B350200E457FE /* Info.plist */,
 			);
@@ -103,6 +229,11 @@
 		3619136F1E3B350200E457FE /* common */ = {
 			isa = PBXGroup;
 			children = (
+				361913DF1E3B39BB00E457FE /* api */,
+				361913E81E3B39BB00E457FE /* APIURLs.swift */,
+				361913E91E3B39BB00E457FE /* AppColors.swift */,
+				3631D9A31E3B4B050013A3E0 /* NetworkingLibrary.swift */,
+				36A1E5951E3D1D9100D50A8F /* imageR-Bridging-Header.h */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -111,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				361913711E3B350200E457FE /* MainWindowController.swift */,
-				361913721E3B350200E457FE /* ViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -156,9 +286,11 @@
 		3619137D1E3B350200E457FE /* AppLogic */ = {
 			isa = PBXGroup;
 			children = (
+				36A1E57E1E3D1B1600D50A8F /* DominantColor */,
 				3619137E1E3B350200E457FE /* GetColorInteractor.swift */,
 				3619137F1E3B350200E457FE /* GetColorInteractorIO.swift */,
 				361913801E3B350200E457FE /* ImageColor.swift */,
+				3631D9A91E3BBEB40013A3E0 /* GetColorManager.swift */,
 			);
 			path = AppLogic;
 			sourceTree = "<group>";
@@ -173,6 +305,8 @@
 		361913821E3B350200E457FE /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				36A1E5A01E3D22B300D50A8F /* ViewController.swift */,
+				36A1E59E1E3D22A300D50A8F /* DragAndDropImageView.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -205,9 +339,38 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
+		361913DF1E3B39BB00E457FE /* api */ = {
+			isa = PBXGroup;
+			children = (
+				361913E11E3B39BB00E457FE /* APIError.swift */,
+				3631D9A71E3B52770013A3E0 /* APIResponse.swift */,
+				361913E01E3B39BB00E457FE /* APIClient.swift */,
+				3631D9A51E3B510E0013A3E0 /* APIResponseTransformer.swift */,
+				361913E61E3B39BB00E457FE /* APIResponseHandler.swift */,
+				361913E41E3B39BB00E457FE /* APIResponseErrorParser.swift */,
+				361913E51E3B39BB00E457FE /* APIResponseErrorStatusCodeHandler.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		361913F51E3B39E000E457FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				361914001E3B39E100E457FE /* Alamofire.framework */,
+				361914021E3B39E100E457FE /* Alamofire iOS Tests.xctest */,
+				361914041E3B39E100E457FE /* Alamofire.framework */,
+				361914061E3B39E100E457FE /* Alamofire macOS Tests.xctest */,
+				361914081E3B39E100E457FE /* Alamofire.framework */,
+				3619140A1E3B39E100E457FE /* Alamofire tvOS Tests.xctest */,
+				3619140C1E3B39E100E457FE /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3623E4641E39C5CE00EFE48A = {
 			isa = PBXGroup;
 			children = (
+				361913F41E3B39E000E457FE /* Alamofire.xcodeproj */,
 				361913691E3B350200E457FE /* imageR */,
 				361913861E3B350200E457FE /* imageRTests */,
 				3623E46E1E39C5D100EFE48A /* Products */,
@@ -221,6 +384,25 @@
 				361913431E3B1AD600E457FE /* imageRTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		36A1E57E1E3D1B1600D50A8F /* DominantColor */ = {
+			isa = PBXGroup;
+			children = (
+				36A1E57F1E3D1B1600D50A8F /* ColorDifference.swift */,
+				36A1E5801E3D1B1600D50A8F /* ColorSpaceConversion.h */,
+				36A1E5811E3D1B1600D50A8F /* ColorSpaceConversion.m */,
+				36A1E5821E3D1B1600D50A8F /* DominantColor.h */,
+				36A1E5831E3D1B1600D50A8F /* DominantColors.swift */,
+				36A1E5841E3D1B1600D50A8F /* Info.plist */,
+				36A1E5851E3D1B1600D50A8F /* INVector3.h */,
+				36A1E5861E3D1B1600D50A8F /* INVector3.m */,
+				36A1E5871E3D1B1600D50A8F /* INVector3SwiftExtensions.swift */,
+				36A1E5881E3D1B1600D50A8F /* KMeans.swift */,
+				36A1E5891E3D1B1600D50A8F /* Memoization.swift */,
+				36A1E58A1E3D1B1600D50A8F /* PlatformExtensions.swift */,
+			);
+			path = DominantColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +434,12 @@
 				3623E46A1E39C5CE00EFE48A /* Frameworks */,
 				3623E46B1E39C5CE00EFE48A /* Resources */,
 				361913571E3B1D7600E457FE /* ShellScript */,
+				361914111E3B39EB00E457FE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				361914101E3B39EB00E457FE /* PBXTargetDependency */,
 			);
 			name = imageR;
 			productName = Colorr;
@@ -293,6 +477,12 @@
 			mainGroup = 3623E4641E39C5CE00EFE48A;
 			productRefGroup = 3623E46E1E39C5D100EFE48A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 361913F51E3B39E000E457FE /* Products */;
+					ProjectRef = 361913F41E3B39E000E457FE /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3623E46C1E39C5CE00EFE48A /* imageR */,
@@ -300,6 +490,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		361914001E3B39E100E457FE /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 361913FF1E3B39E100E457FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		361914021E3B39E100E457FE /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 361914011E3B39E100E457FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		361914041E3B39E100E457FE /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 361914031E3B39E100E457FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		361914061E3B39E100E457FE /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = 361914051E3B39E100E457FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		361914081E3B39E100E457FE /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 361914071E3B39E100E457FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3619140A1E3B39E100E457FE /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 361914091E3B39E100E457FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3619140C1E3B39E100E457FE /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3619140B1E3B39E100E457FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		361913411E3B1AD600E457FE /* Resources */ = {
@@ -315,6 +557,7 @@
 			files = (
 				3619138C1E3B350300E457FE /* Assets.xcassets in Resources */,
 				3619138D1E3B350300E457FE /* Main.storyboard in Resources */,
+				36A1E58E1E3D1B1600D50A8F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,11 +584,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A1E59D1E3D1F4F00D50A8F /* PlatformExtensions.swift in Sources */,
+				36A1E5941E3D1CD200D50A8F /* GetColorManager.swift in Sources */,
+				36A1E5991E3D1F4F00D50A8F /* INVector3.m in Sources */,
+				36A1E59B1E3D1F4F00D50A8F /* KMeans.swift in Sources */,
 				361913A11E3B35EF00E457FE /* ImageColor.swift in Sources */,
+				36A1E59C1E3D1F4F00D50A8F /* Memoization.swift in Sources */,
+				36A1E5971E3D1F4F00D50A8F /* ColorSpaceConversion.m in Sources */,
+				36A1E59A1E3D1F4F00D50A8F /* INVector3SwiftExtensions.swift in Sources */,
 				361913A21E3B35F600E457FE /* GetColorInteractorTests.swift in Sources */,
 				3619139F1E3B35EF00E457FE /* GetColorInteractor.swift in Sources */,
+				36A1E5961E3D1F4E00D50A8F /* ColorDifference.swift in Sources */,
 				361913A31E3B35F600E457FE /* ImageColorTests.swift in Sources */,
 				361913A01E3B35EF00E457FE /* GetColorInteractorIO.swift in Sources */,
+				36A1E5981E3D1F4F00D50A8F /* DominantColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,18 +607,37 @@
 			files = (
 				361913951E3B350300E457FE /* TagUser.swift in Sources */,
 				3619138B1E3B350300E457FE /* AppDelegate.swift in Sources */,
+				3631D9A41E3B4B050013A3E0 /* NetworkingLibrary.swift in Sources */,
+				361913EF1E3B39BB00E457FE /* APIResponseErrorStatusCodeHandler.swift in Sources */,
 				361913941E3B350300E457FE /* Image.swift in Sources */,
-				3619138A1E3B350300E457FE /* AppColors.swift in Sources */,
+				361913EE1E3B39BB00E457FE /* APIResponseErrorParser.swift in Sources */,
 				361913901E3B350300E457FE /* NSImage+Extension.swift in Sources */,
+				3631D9A81E3B52770013A3E0 /* APIResponse.swift in Sources */,
+				36A1E5931E3D1B1600D50A8F /* PlatformExtensions.swift in Sources */,
+				36A1E58D1E3D1B1600D50A8F /* DominantColors.swift in Sources */,
+				3631D9A61E3B510E0013A3E0 /* APIResponseTransformer.swift in Sources */,
+				361913F21E3B39BB00E457FE /* APIURLs.swift in Sources */,
+				36A1E5921E3D1B1600D50A8F /* Memoization.swift in Sources */,
+				36A1E58F1E3D1B1600D50A8F /* INVector3.m in Sources */,
 				361913971E3B350300E457FE /* GetColorInteractorIO.swift in Sources */,
+				36A1E59F1E3D22A300D50A8F /* DragAndDropImageView.swift in Sources */,
 				361913991E3B350300E457FE /* BGColorView.swift in Sources */,
+				36A1E5911E3D1B1600D50A8F /* KMeans.swift in Sources */,
 				361913961E3B350300E457FE /* GetColorInteractor.swift in Sources */,
+				361913EA1E3B39BB00E457FE /* APIClient.swift in Sources */,
 				361913931E3B350300E457FE /* ColorIM.swift in Sources */,
 				3619139A1E3B350300E457FE /* ColorTableCellView.swift in Sources */,
-				3619138F1E3B350300E457FE /* ViewController.swift in Sources */,
 				361913981E3B350300E457FE /* ImageColor.swift in Sources */,
+				36A1E5901E3D1B1600D50A8F /* INVector3SwiftExtensions.swift in Sources */,
+				361913EB1E3B39BB00E457FE /* APIError.swift in Sources */,
+				36A1E5A11E3D22B300D50A8F /* ViewController.swift in Sources */,
+				3631D9AA1E3BBEB50013A3E0 /* GetColorManager.swift in Sources */,
 				361913911E3B350300E457FE /* NSViewController+Extension.swift in Sources */,
+				36A1E58B1E3D1B1600D50A8F /* ColorDifference.swift in Sources */,
 				3619138E1E3B350300E457FE /* MainWindowController.swift in Sources */,
+				361913F31E3B39BB00E457FE /* AppColors.swift in Sources */,
+				36A1E58C1E3D1B1600D50A8F /* ColorSpaceConversion.m in Sources */,
+				361913F01E3B39BB00E457FE /* APIResponseHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +648,11 @@
 			isa = PBXTargetDependency;
 			target = 3623E46C1E39C5CE00EFE48A /* imageR */;
 			targetProxy = 361913481E3B1AD600E457FE /* PBXContainerItemProxy */;
+		};
+		361914101E3B39EB00E457FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire macOS";
+			targetProxy = 3619140F1E3B39EB00E457FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -511,12 +787,14 @@
 		3623E47D1E39C5D100EFE48A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = imageR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.imageR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$SRCROOT/imageR/common/imageR-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -524,12 +802,14 @@
 		3623E47E1E39C5D100EFE48A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = imageR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.imageR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$SRCROOT/imageR/common/imageR-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -544,6 +824,7 @@
 				3619134C1E3B1AD600E457FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3623E4681E39C5CE00EFE48A /* Build configuration list for PBXProject "imageR" */ = {
 			isa = XCConfigurationList;
