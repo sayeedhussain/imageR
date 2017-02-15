@@ -8,18 +8,16 @@
 
 import Foundation
 
-public let APIErrorDomain = "APIErrorDomain"
-
-struct APIError: Error {
-
-    static let GenericMessage = "Something went wrong. Please retry."
-    static let NoNetworkMessage = "Internet connection appears to be offline."
-
-    let domain: String = APIErrorDomain
-    var statusCode: Int = 0
+protocol APIError: APPError, UserError {
     
-    var userMessage: String = GenericMessage
-    var errorMessage: String = GenericMessage
+}
+
+struct APIErrorC: APIError {
+
+    var statusCode: Int = 0
+
+    var errorMessage: String = APIConstants.GenericMessage
+    var userMessage: String = APIConstants.GenericMessage
 
     var url: String
 
@@ -57,9 +55,9 @@ struct APIError: Error {
     }
 }
 
-extension APIError: CustomStringConvertible {
+extension APIErrorC: CustomStringConvertible {
  
     var description: String {
-        return "Domain: \(self.domain), ErrorMessage: \(self.errorMessage), URL: \(self.url), StatusCode: \(self.statusCode)"
+        return "Domain: \(APIConstants.APIErrorDomain), ErrorMessage: \(self.errorMessage), URL: \(self.url), StatusCode: \(self.statusCode)"
     }
 }

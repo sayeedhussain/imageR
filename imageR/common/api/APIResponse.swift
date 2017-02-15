@@ -6,20 +6,22 @@
 //  Copyright © 2017 *. All rights reserved.
 //
 
-struct APIResponse {
+protocol APIResponse {
+    
+    var url: String {get}
+    var status: Int? {get}
+    var result: Any? {get}
+    var error: Error? {get}
+}
+
+struct APIResponseC: APIResponse {
     
     var url: String
-    var status: Int? = 0
+    var status: Int?
     var result: Any?
     var error: Error?
     
-    init(url _url: String, result _res: Any?, error _err: Error?) {
-        self.url = _url
-        self.result = _res
-        self.error = _err
-    }
-    
-    init(url _url: String, status _status: Int?, result _res: Any?, error _err: Error?) {
+    init(url _url: String, status _status: Int? = 0, result _res: Any?, error _err: Error?) {
         self.url = _url
         self.status = _status
         self.result = _res

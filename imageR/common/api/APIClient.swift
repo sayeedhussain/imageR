@@ -8,52 +8,76 @@
 
 class APIClient {
     
-    class func getWithURL(_ url: String, completion: @escaping ((Any?, APIError?) -> ())) {
+    func getWithURL(_ url: String, completion: @escaping ((Any?, APIError?) -> ())) {
         
         NetworkingLibrary.getWithURL(url) { response in
-            let apiResponse = APIResponseTransformer.transformResponse(response: response)
-            APIResponseHandler.handleAPIResponse(apiResponse, completion: completion)
+            
+            let apiResponse = APIResponseTransformer().transform(response)
+
+            APIResponseHandler().handle(apiResponse) { result, error in
+                completion(result, error)
+            }
         }
     }
     
-    class func getWithURL(_ url: String, headers: [String: String], completion: @escaping ((Any?, APIError?) -> ())) {
+    func getWithURL(_ url: String, headers: [String: String], completion: @escaping ((Any?, APIError?) -> ())) {
         
         NetworkingLibrary.getWithURL(url, headers: headers) { response in
-            let apiResponse = APIResponseTransformer.transformResponse(response: response)
-            APIResponseHandler.handleAPIResponse(apiResponse, completion: completion)
+            
+            let apiResponse = APIResponseTransformer().transform(response)
+            
+            APIResponseHandler().handle(apiResponse) { result, error in
+                completion(result, error)
+            }
         }
     }
 
-    class func getWithURL(_ url: String, params: [String : Any], completion: @escaping ((Any?, APIError?) -> ())) {
+    func getWithURL(_ url: String, params: [String : Any], completion: @escaping ((Any?, APIError?) -> ())) {
 
         NetworkingLibrary.getWithURL(url, params: params) { response in
-            let apiResponse = APIResponseTransformer.transformResponse(response: response)
-            APIResponseHandler.handleAPIResponse(apiResponse, completion: completion)
+           
+            let apiResponse = APIResponseTransformer().transform(response)
+            
+            APIResponseHandler().handle(apiResponse) { result, error in
+                completion(result, error)
+            }
         }
     }
 
-    class func getWithURL(_ url: String, params: [String : Any], headers: [String: String], completion: @escaping ((Any?, APIError?) -> ())) {
+    func getWithURL(_ url: String, params: [String : Any], headers: [String: String], completion: @escaping ((Any?, APIError?) -> ())) {
         
         NetworkingLibrary.getWithURL(url, params: params, headers: headers) { response in
-            let apiResponse = APIResponseTransformer.transformResponse(response: response)
-            APIResponseHandler.handleAPIResponse(apiResponse, completion: completion)
+            
+            let apiResponse = APIResponseTransformer().transform(response)
+            
+            APIResponseHandler().handle(apiResponse) { result, error in
+                completion(result, error)
+            }
         }
     }
 
-    class func postWithURL(_ url: String, params: [String : Any], completion: @escaping ((Any?, APIError?) -> ())) {
+    func postWithURL(_ url: String, params: [String : Any], completion: @escaping ((Any?, APIError?) -> ())) {
         
         NetworkingLibrary.postWithURL(url, params: params) { response in
-            let apiResponse = APIResponseTransformer.transformResponse(response: response)
-            APIResponseHandler.handleAPIResponse(apiResponse, completion: completion)
+            
+            let apiResponse = APIResponseTransformer().transform(response)
+            
+            APIResponseHandler().handle(apiResponse) { result, error in
+                completion(result, error)
+            }
         }
     }
     
-    class func postWithURL(_ url: String, params: [String : Any], headers: [String : String], completion: @escaping ((Any?,
+    func postWithURL(_ url: String, params: [String : Any], headers: [String : String], completion: @escaping ((Any?,
         APIError?) -> ())) {
                 
         NetworkingLibrary.postWithURL(url, params: params, headers: headers) { response in
-            let resp = APIResponse(url: url, status: response.response?.statusCode, result: response.result.value, error: response.result.error)
-            APIResponseHandler.handleAPIResponse(resp, completion: completion)
+            
+            let apiResponse = APIResponseTransformer().transform(response)
+            
+            APIResponseHandler().handle(apiResponse) { result, error in
+                completion(result, error)
+            }
         }
     }
 }

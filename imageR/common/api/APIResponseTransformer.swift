@@ -11,8 +11,8 @@ import Alamofire
 
 class APIResponseTransformer {
     
-    static func transformResponse(response :DataResponse<Any>) -> APIResponse {
-        
-        return APIResponse(url: (response.request?.url?.absoluteString)!, status: response.response?.statusCode, result: response.result.value, error: response.result.error)
+    func transform(_ response :DataResponse<Any>) -> APIResponse {
+
+        return APIResponseC(url: (response.request?.url?.absoluteString)!, status: response.response?.statusCode, result: response.result.value, error: response.result.error)
     }
 }
